@@ -1,0 +1,15 @@
+{
+  "name": "eslint-it-should-skip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./tests/lib/rules/it-should-skip.js"
+  },
+  "keywords": [],
+  "author": "reggev",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^7.31.0"
+  }
+}
