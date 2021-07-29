@@ -1,15 +1,37 @@
 {
-  "name": "eslint-it-should-skip",
+  "name": "@reggev/eslint-plugin-it-should-skip",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "helps ensuring tests that should be skipped are skipped",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "main": "lib/index.js",
   "scripts": {
-    "test": "node ./tests/lib/rules/it-should-skip.js"
+    "test:eslint": "eslint ./",
+    "test:typescript": "tsc --noEmit --emitDeclarationOnly false",
+    "test:rule-tester": "node ./tests/lib/rules/it-should-skip.js",
+    "test": "concurrently -r 'npm:test:*'"
   },
-  "keywords": [],
   "author": "reggev",
   "license": "MIT",
   "peerDependencies": {
-    "eslint": "^7.31.0"
+    "eslint": ">=0.8.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.28.0",
+    "@types/estree": "^0.0.50",
+    "concurrently": "^6.2.0",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-eslint-plugin": "^3.5.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsdoc": "^36.0.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-jsdoc": "^0.3.23",
+    "typescript": "^4.3.5"
   }
 }
