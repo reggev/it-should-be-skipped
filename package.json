@@ -54,10 +54,5 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "license": "ISC",
-  "pre-commit": [
-    "lint",
-    "validate",
-    "test"
-  ]
+  "license": "ISC"
 }
