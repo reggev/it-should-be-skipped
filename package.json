@@ -2,6 +2,13 @@
   "name": "@reggev/eslint-plugin-it-should-skip",
   "version": "1.0.0",
   "description": "helps ensuring tests that should be skipped are skipped",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reggev/it-should-skip.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "eslint",
     "eslintplugin",
