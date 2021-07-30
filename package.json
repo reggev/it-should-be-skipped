@@ -25,9 +25,6 @@
     "lint": "jshint .",
     "validate": "npm ls"
   },
-  "pre-commit": [
-    "test"
-  ],
   "dependencies": {
     "concurrently": "^6.2.0",
     "eslint": "^7.31.0",
