@@ -1,6 +1,6 @@
 {
   "name": "@reggev/eslint-plugin-it-should-be-skipped",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ensuring All tests that should be skipped are skipped",
   "repository": {
     "type": "git",
