@@ -1,10 +1,10 @@
 {
-  "name": "@reggev/eslint-plugin-it-should-skip",
-  "version": "1.0.0",
-  "description": "helps ensuring tests that should be skipped are skipped",
+  "name": "@reggev/eslint-plugin-it-should-be-skipped",
+  "version": "0.0.0",
+  "description": "Ensuring All tests that should be skipped are skipped",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reggev/it-should-skip.git"
+    "url": "https://github.com/reggev/it-should-be-skipped.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -14,31 +14,38 @@
     "eslintplugin",
     "eslint-plugin"
   ],
+  "author": "Reggev",
   "main": "lib/index.js",
   "scripts": {
     "test:eslint": "eslint ./",
     "test:typescript": "tsc --noEmit --emitDeclarationOnly false",
-    "test:rule-tester": "node ./tests/lib/rules/it-should-skip.js",
+    "test:rule-tester": "mocha tests --recursive",
     "test": "concurrently -r 'npm:test:*'"
   },
-  "author": "reggev",
-  "license": "MIT",
-  "peerDependencies": {
-    "eslint": ">=0.8.0"
-  },
-  "devDependencies": {
-    "@types/eslint": "^7.28.0",
-    "@types/estree": "^0.0.50",
+  "dependencies": {
     "concurrently": "^6.2.0",
     "eslint": "^7.31.0",
+    "prettier": "^2.3.2",
+    "prettier-plugin-jsdoc": "^0.3.23",
+    "requireindex": "~1.1.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.7",
+    "@types/requireindex": "^1.2.0",
+    "eslint": "^7.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-eslint-plugin": "^3.5.2",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsdoc": "^36.0.6",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.3.2",
-    "prettier-plugin-jsdoc": "^0.3.23",
-    "typescript": "^4.3.5"
-  }
+    "mocha": "^7.2.0",
+    "@types/eslint": "^7.28.0",
+    "@types/estree": "^0.0.50"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "ISC"
 }

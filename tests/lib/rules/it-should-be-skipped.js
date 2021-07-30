@@ -1,4 +1,3 @@
-'use strict';
 /**
  * @author Reggev
  * @file Ensuring All tests that should be skipped are skipped
@@ -8,7 +7,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require('../../../lib/rules/it-should-skip');
+const rule = require('../../../lib/rules/it-should-be-skipped');
 const RuleTester = require('eslint').RuleTester;
 
 //------------------------------------------------------------------------------
@@ -17,7 +16,7 @@ const RuleTester = require('eslint').RuleTester;
 
 const ruleTester = new RuleTester();
 
-ruleTester.run('it-should-skip', rule, {
+ruleTester.run('it-should-be-skipped', rule, {
   valid: [
     { code: "it('should do whatever')" },
     { code: "it.skip('should be skipped')" },
