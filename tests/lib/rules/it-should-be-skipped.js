@@ -27,17 +27,17 @@ ruleTester.run('it-should-be-skipped', rule, {
   invalid: [
     {
       code: "it('should be skipped')",
-      errors: [{ message: 'it should be skipped...' }],
+      errors: [{ message: 'this test should be skipped' }],
       output: "it.skip('should be skipped')",
     },
     {
       code: "it('should be skipped, whatever')",
-      errors: [{ message: 'it should be skipped...' }],
+      errors: [{ message: 'this test should be skipped' }],
       output: "it.skip('should be skipped, whatever')",
     },
     {
       code: "it('should be skipped - whatever')",
-      errors: [{ message: 'it should be skipped...' }],
+      errors: [{ message: 'this test should be skipped' }],
       output: "it.skip('should be skipped - whatever')",
     },
   ],
