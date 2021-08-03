@@ -1,6 +1,12 @@
 # eslint-plugin-it-should-skip
 
-Ensuring All tests that should be skipped are skipped
+**Ensuring All tests that should be skipped are skipped before committing them**
+
+This plugin will trigger a warning/error if a test's name starts with `'should be skipped'` or a `describe` with a message starting with `'a skipped group'`.
+
+**Those triggers can be customized**
+
+see [examples](#examples)
 
 ## Installation
 
@@ -31,13 +37,42 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "@reggev/it-should-be-skipped/it-should-be-skipped": 1
+    "@reggev/it-should-be-skipped/it-should-be-skipped": ["warn"]
   }
 }
 ```
 
-## Supported Rules
+You can also set custom triggers (optional):
 
-Read more on the rule's `doc` directory
+```json
+{
+  "rules": {
+    "@reggev/it-should-be-skipped/it-should-be-skipped": [
+      "warn",
+      { "it": "custom trigger", "describe": "custom group trigger" }
+    ]
+  }
+}
+```
 
-- @reggev/it-should-be-skipped/it-should-be-skipped
+## examples
+
+Examples of **incorrect** code for this rule:
+
+```js
+it('should be skipped');
+it('should be skipped, going to get some real data from a 3rd party');
+it('should be skipped - some debugging test');
+describe('a skipped group');
+it('my custom trigger, doing something that should be skipped');
+```
+
+Examples of **correct** code for this rule:
+
+```js
+it.skip('should be skipped');
+it.skip('should be skipped, going to get some real data from a 3rd party');
+it.skip('should be skipped - some debugging test');
+describe.skip('a skipped group');
+it.skip('my custom trigger, doing something that should be skipped');
+```
