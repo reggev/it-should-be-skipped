@@ -7,7 +7,7 @@
     "url": "https://github.com/reggev/it-should-be-skipped.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   },
   "keywords": [
     "eslint",
