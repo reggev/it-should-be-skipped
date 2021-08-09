@@ -19,7 +19,7 @@ $ npm i -D eslint
 Next, install `eslint-plugin-it-should-skip`:
 
 ```
-$ npm i -D eslint-plugin-it-should-skip
+$ npm i -D @reggev/eslint-plugin-it-should-be-skipped
 ```
 
 ## Usage
